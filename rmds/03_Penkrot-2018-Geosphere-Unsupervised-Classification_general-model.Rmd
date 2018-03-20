@@ -188,10 +188,6 @@ bestclusterresult<-bestClusterResult$classification
 mclust_results[,i]<-bestclusterresult
 colnames(mclust_results)[i]<-paste("mclust_",pc[i],"PCs_",pdf[i],"Clusters",sep="")
 }
-
-load(paste("../produced_data/G3_modelclust_3-PCs__5-PDFs/data.dat",sep="")) 
-bestclusterresult<-bestClusterResult$classification
-mclust_results<-bestclusterresult
 ```
 
 ##Hierarchical-based clustering (hclust)
@@ -213,9 +209,6 @@ Cut3PC_5CL<-as.data.frame(cutree(MyTree3, k=5)) # cuts hclust tree at 5 clusters
                        
 hclust_results<-cbind(Cut2PC_2CL,Cut2PC_3CL,Cut2PC_4CL,Cut2PC_5CL,Cut3PC_2CL,Cut3PC_3CL,Cut3PC_4CL,Cut3PC_5CL)
 colnames(hclust_results)<-c("hclust_2PCs-2Clusters","hclust_2PCs-3Clusters","hclust_2PCs-4Clusters","hclust_2PCs-5Clusters","hclust_3PCs-2Clusters","hclust_3PCs-3Clusters","hclust_3PCs-4Clusters","hclust_3PCs-5Clusters")
-
-hclust_results<-(Cut3PC_5CL)
-colnames(hclust_results)<-c("hclust_3PCs-5Clusters")
 ```
 
 ##Statistical Analysis of Results
