@@ -1,0 +1,1 @@
+This is an Rstudio project that analyses sediment property data from Integrated Ocean Drilling Site U1419. See here for more details about this drilling location: http://iodp.tamu.edu/scienceops/expeditions/alaska_tectonics_climate.html 
